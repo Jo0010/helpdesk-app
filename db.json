@@ -1,0 +1,24 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "text": "Printer not working",
+      "status": "open",
+      "comments": []
+    },
+    {
+      "id": 2,
+      "text": "Cannot login to email",
+      "status": "closed",
+      "comments": []
+    },
+    {
+      "text": "test",
+      "status": "open",
+      "id": 3,
+      "comments": [
+        "teset"
+      ]
+    }
+  ]
+}
