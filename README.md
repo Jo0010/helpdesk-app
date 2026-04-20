@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+#  Helpdesk App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Mini application web développée en **React.js** permettant de gérer des tickets IT avec un système de commentaires interactif.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+*  Création de tickets
+*  Modification du contenu des tickets (inline edit)
+*  Suppression de tickets
+*  Changement de statut (open / closed)
+*  Système de commentaires (style chat)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  * Ajout, modification et suppression
+  * Raccourcis clavier (Enter / Escape)
+* Persistance des données via API (JSON Server)
+*  Interface dynamique et réactive
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Technologies utilisées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React.js (Hooks : useState, useEffect, useRef)
+* JavaScript (ES6+)
+* JSON Server (simulation backend REST API)
+* HTML / CSS (UI custom)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Structure du projet
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+│
+├── api/
+│   └── ticketsApi.js
+│
+├── components/
+│   ├── TicketList.js
+│   ├── TicketItem.js
+│   └── CommentList.js
+│
+├── utils/
+│   └── safe.js
+│
+├── App.js
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation & lancement
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Cloner le projet
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/TON-USERNAME/helpdesk-app.git
+cd helpdesk-app
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. Installer les dépendances
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Lancer le frontend (React)
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### 4. Lancer le backend (JSON Server)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+json-server --watch db.json --port 3001
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##  Accès
 
-### Advanced Configuration
+* Frontend : http://localhost:3000
+* API : http://localhost:3001/tickets
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Objectif du projet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Ce projet a été réalisé pour :
 
-### `npm run build` fails to minify
+* Développer des compétences en React
+* Comprendre la gestion d’état et des composants
+* Manipuler une API REST (CRUD)
+* Construire une interface utilisateur moderne type outil IT (Helpdesk)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Améliorations possibles
+
+*  Authentification utilisateur
+*  Gestion des rôles (admin / user)
+*  Ajout de timestamps sur les commentaires
+*  Amélioration UI (dashboard, dark mode)
+*  Déploiement (Vercel / Netlify)
+
+---
+
+## Auteur
+
+Développé par Jo Gendarme
+Projet réalisé dans un objectif d’apprentissage et de portfolio.
+
+---
